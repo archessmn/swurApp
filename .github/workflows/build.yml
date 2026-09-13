@@ -7,6 +7,13 @@ on:
       - completed
   workflow_dispatch:
 
+permissions:
+  contents: read
+  packages: write
+
+env:
+  REGISTRY: ghcr.io
+
 jobs:
   build-and-push:
     if: >
